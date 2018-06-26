@@ -23,7 +23,7 @@ import { PlacesPage } from '../pages/places/places';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule,AngularFireDatabase } from 'angularfire2/database';
 import { AddservicsProvider } from '../providers/addservics/addservics';
-import{AngularFireAuth} from 'angularfire2/auth';
+//import{AngularFireAuth} from 'angularfire2/auth';
 
 
 export const fireconfig ={
@@ -46,8 +46,7 @@ export const fireconfig ={
     SearchPage,
     MapPage,
     AddplacePage,
-    PlacesPage,
-    AngularFireAuth
+    PlacesPage
     
     
   ],
@@ -56,7 +55,7 @@ export const fireconfig ={
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(fireconfig),
     AngularFireDatabase,
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule
     
   ],
   bootstrap: [IonicApp],
@@ -77,9 +76,7 @@ export const fireconfig ={
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
    AddservicsProvider,
-    AngularFireDatabase,
-    AngularFireAuth,
-    
+  
   ]
 })
 export class MyCommonModule {}
